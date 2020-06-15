@@ -13,6 +13,14 @@ jobs:
     - name: LastFM
       run: |
         pip install requests
+        year=`date +"%Y"`
+        month=`date +"%m"`
+        if [ ! -d "$PWD/$year" ]; then
+          mkdir $PWD/$year
+        fi
+        if [ ! -d "$PWD/$year/$month" ]; then
+          mkdir $PWD/$year/$month
+        fi
         python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD
     env:
       LASTFM_APIKEY: ${{ secrets.LASTFM_APIKEY }}
