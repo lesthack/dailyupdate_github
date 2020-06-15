@@ -1,7 +1,7 @@
 name: Scrobbler
 on:
   schedule:
-    - cron: "* * * * *"
+    - cron: "0 * * * *"
 jobs:
   scrobbling:
     runs-on: ubuntu-latest
@@ -14,8 +14,8 @@ jobs:
         year=`date +"%Y"`
         month=`date +"%m"`
         
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email ${{ secrets.COMMIT_EMAIL }}
+        git config --local user.name "Jorge Hernández"
         
         pip install requests
         
@@ -27,9 +27,9 @@ jobs:
         fi
     - name: LastFM & Commits
       run: |
-        for i in {1..6}
+        for i in {1..2}
         do
-          echo "Scrobble $i"
+          echo "Scrobble $i:"
           python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
           git add music
           if [[ `git status --porcelain --untracked-files=no` ]]; then
