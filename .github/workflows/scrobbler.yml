@@ -13,4 +13,7 @@ jobs:
     - name: LastFM
       run: |
         pip install requests
-        python lastfm.py
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD
+    env:
+      LASTFM_APIKEY: ${{ secrets.LASTFM_APIKEY }}
+      LASTFM_USER: ${{ secrets.LASTFM_USER }}
