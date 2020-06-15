@@ -23,11 +23,11 @@ jobs:
         fi
         python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD > tmp
         sleep 60
-        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD > tmp
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD >> tmp
         sleep 60
-        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD > tmp
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD >> tmp
         sleep 60
-        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD > tmp
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD >> tmp
     - name: Commit Files
       run: |
         date=`date +"%Y-%m-%d %H:%M"`
