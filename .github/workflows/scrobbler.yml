@@ -8,30 +8,35 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: LastFM
+    - name: Configurations
       run: |
-        pip install requests
+        date=`date +"%Y-%m-%d %H:%M"`
         year=`date +"%Y"`
         month=`date +"%m"`
+        
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        pip install requests
+        
         if [ ! -d "$PWD/$year" ]; then
           mkdir $PWD/$year
         fi
         if [ ! -d "$PWD/$year/$month" ]; then
           mkdir $PWD/$year/$month
         fi
-        python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
-        #sleep 60
-    - name: Commit Files
+    - name: LastFM & Commits
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add music
-        #gstatus=`git status music | grep 'nothing to commit, working tree clean'`
-        if [[ `git status --porcelain --untracked-files=no` ]]; then
-          echo "Hay cambios"
-          #date=`date +"%Y-%m-%d %H:%M"`
-          #git commit -m 'Lastfm: $date'
-        fi
+        for i in {1..2}
+        do
+          python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
+          git add music
+          if [[ `git status --porcelain --untracked-files=no` ]]; then
+          echo "Hay cambios: $date"
+            #git commit -m 'Lastfm: $date'
+          fi
+          sleep 30
+        done
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
