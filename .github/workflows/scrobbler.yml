@@ -20,22 +20,14 @@ jobs:
           mkdir $PWD/$year/$month
         fi
         python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
-        sleep 60
-        python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
-        sleep 60
-        python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
-        sleep 60
-        python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
-        sleep 60
-        python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
-        cat $tmp
+        #sleep 60
     - name: Commit Files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add music
         gstatus=`git status music | grep 'nothing to commit, working tree clean'`
-        if [ -z "$gstatus" ]; then
+        if [[ `git status --porcelain --untracked-files=no` ]]; then
           echo "Hay cambios"
           #date=`date +"%Y-%m-%d %H:%M"`
           #git commit -m 'Lastfm: $date'
