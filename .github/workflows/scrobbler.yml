@@ -29,9 +29,13 @@ jobs:
         git config --local user.name "GitHub Action"
         if [ -f tmp ]; then
           git add music
-          git commit -m "Lastfm: $date"
+          git commit -m "Lastfm: $date" -a
           rm tmp
         fi
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
     env:
       LASTFM_APIKEY: ${{ secrets.LASTFM_APIKEY }}
       LASTFM_USER: ${{ secrets.LASTFM_USER }}
