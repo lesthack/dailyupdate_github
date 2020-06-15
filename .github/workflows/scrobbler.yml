@@ -1,9 +1,7 @@
 name: Scrobbler
-
 on:
   schedule:
     - cron: "* * * * *"
-
 jobs:
   scrobbler:
     runs-on: ubuntu-latest
@@ -39,8 +37,8 @@ jobs:
         gstatus=`git status music | grep 'nothing to commit, working tree clean'`
         if [ -z "$gstatus" ]; then
           echo "Hay cambios"
-          date=`date +"%Y-%m-%d %H:%M"`
-          git commit -m 'Lastfm: $date'
+          #date=`date +"%Y-%m-%d %H:%M"`
+          #git commit -m 'Lastfm: $date'
         fi
     - name: Push changes
       uses: ad-m/github-push-action@master
