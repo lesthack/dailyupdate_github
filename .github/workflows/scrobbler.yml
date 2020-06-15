@@ -1,0 +1,16 @@
+name: Scrobbler
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+jobs:
+  scrobbler:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: LastFM
+      run: |
+        pip install requests
+        python lastfm.py
