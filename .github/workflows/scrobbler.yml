@@ -32,7 +32,7 @@ jobs:
           python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
           git add music
           if [[ `git status --porcelain --untracked-files=no` ]]; then
-            echo "Hay cambios: $date"
+            echo "Hay cambios: `date +"%Y-%m-%d %H:%M"`"
             #git commit -m 'Lastfm: $date'
           fi
           sleep 30
