@@ -27,7 +27,7 @@ jobs:
         fi
     - name: LastFM & Commits
       run: |
-        for i in {1..2}
+        for i in {1..120}
         do
           echo "Scrobble $i:"
           python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
