@@ -33,12 +33,13 @@ jobs:
         cat $tmp
     - name: Commit Files
       run: |
-        date=`date +"%Y-%m-%d %H:%M"`
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add music
         gstatus=`git status music | grep 'nothing to commit, working tree clean'`
         if [ -z "$gstatus" ]; then
+          echo "Hay cambios"
+          date=`date +"%Y-%m-%d %H:%M"`
           git commit -m 'Lastfm: $date'
         fi
     - name: Push changes
