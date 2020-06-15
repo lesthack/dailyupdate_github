@@ -21,7 +21,17 @@ jobs:
         if [ ! -d "$PWD/$year/$month" ]; then
           mkdir $PWD/$year/$month
         fi
-        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD > tmp
+    - name: Commit Files
+      run: |
+        date=`date +"%Y-%m-%d %H:%M"`
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        if [ -f tmp ]; then
+          git add music
+          git commit -m "Lastfm: $date"
+          rm tmp
+        fi
     env:
       LASTFM_APIKEY: ${{ secrets.LASTFM_APIKEY }}
       LASTFM_USER: ${{ secrets.LASTFM_USER }}
