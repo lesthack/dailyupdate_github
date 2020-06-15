@@ -37,7 +37,7 @@ jobs:
         git config --local user.name "GitHub Action"
         if [ -f tmp ]; then
           git add music
-          git commit -m "Lastfm: $date" -a
+          git commit -m "Lastfm: $date"
           rm tmp
         fi
     - name: Push changes
