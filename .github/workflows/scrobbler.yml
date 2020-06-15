@@ -2,7 +2,7 @@ name: Scrobbler
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "* * * * *"
 
 jobs:
   scrobbler:
