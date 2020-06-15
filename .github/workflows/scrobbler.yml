@@ -21,25 +21,25 @@ jobs:
         if [ ! -d "$PWD/$year/$month" ]; then
           mkdir $PWD/$year/$month
         fi
-        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD > tmp
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD
         sleep 60
-        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD >> tmp
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD
         sleep 60
-        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD >> tmp
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD
         sleep 60
-        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD >> tmp
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD
         sleep 60
-        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD >> tmp
+        python lastfm.py -k $LASTFM_APIKEY -u $LASTFM_USER -s -p $PWD
         cat $tmp
     - name: Commit Files
       run: |
         date=`date +"%Y-%m-%d %H:%M"`
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        if [ -f tmp ]; then
-          git add music
+        git add music
+        gstatus=`git status music | grep 'nothing to commit, working tree clean'`
+        if [ -z "$gstatus" ]; then
           git commit -m "Lastfm: $date"
-          rm tmp
         fi
     - name: Push changes
       uses: ad-m/github-push-action@master
