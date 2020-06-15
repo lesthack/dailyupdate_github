@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: "* * * * *"
 jobs:
-  scrobbler:
+  scrobbling:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -27,12 +27,12 @@ jobs:
         fi
     - name: LastFM & Commits
       run: |
-        for i in {1..12}
+        for i in {1..6}
         do
+          echo "Scrobble $i"
           python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
           git add music
           if [[ `git status --porcelain --untracked-files=no` ]]; then
-          #echo "Hay cambios: `date +"%Y-%m-%d %H:%M"`"
             git commit -m 'Lastfm: `date +"%Y-%m-%d %H:%M"`'
           fi
           sleep 30
