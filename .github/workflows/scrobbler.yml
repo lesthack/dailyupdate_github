@@ -1,7 +1,7 @@
-name: Scrobbler
+name: Songs Scrobbler
 on:
   schedule:
-    - cron: "35 * * * *"
+    - cron: "0 * * * *"
 jobs:
   scrobbling:
     runs-on: ubuntu-latest
@@ -22,11 +22,11 @@ jobs:
         echo "Path: $PWD"
         if [ ! -d "$PWD/music/$year" ]; then
           echo "Creando path año: $year"
-          mkdir $PWD/$year
+          mkdir $PWD/music/$year
         fi
         if [ ! -d "$PWD/music/$year/$month" ]; then
           echo "Creando path año/mes: $month"
-          mkdir $PWD/$year/$month
+          mkdir $PWD/music/$year/$month
         fi
     - name: LastFM & Commits
       run: |
@@ -39,14 +39,6 @@ jobs:
             git commit -m "Lastfm: `date +"%Y-%m-%d %H:%M"`"
           fi
           sleep 30
-          if [ $i -eq 1 ]; then
-            echo "Albums:"
-            python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -a -p $PWD/music/albums.json
-            git add /music/albums.json
-            if [[ `git status --porcelain --untracked-files=no` ]]; then
-              git commit -m "Albums: `date +"%Y-%m-%d %H:%M"`"
-            fi
-          fi
         done
         git pull origin master
     - name: Push changes
