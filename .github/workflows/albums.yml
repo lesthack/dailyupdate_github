@@ -1,0 +1,34 @@
+name: Albums Scrobbler
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+jobs:
+  scrobbling:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Configurations
+      run: |
+        date=`date +"%Y-%m-%d %H:%M"`
+        year=`date +"%Y"`
+        month=`date +"%m"`
+        
+        git config --local user.email ${{ secrets.COMMIT_EMAIL }}
+        git config --local user.name "Jorge Hernández"
+        git config --local pull.rebase true
+        
+        pip install requests
+    - name: LastFM & Commits
+      run: |
+        echo "Albums:"
+        python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -a -p $PWD/music/albums.json
+        git add music/albums.json
+        if [[ `git status --porcelain --untracked-files=no` ]]; then
+          git commit -m "Albums: `date +"%Y-%m-%d %H:%M"`"
+        fi
+        git pull origin master
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
