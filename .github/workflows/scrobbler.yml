@@ -40,6 +40,7 @@ jobs:
           if [ $i -eq 50 ]; then
             echo "Albums:"
             python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -a -p $PWD/music/albums.json
+            git add /music/albums.json
             if [[ `git status --porcelain --untracked-files=no` ]]; then
               git commit -m "Albums: `date +"%Y-%m-%d %H:%M"`"
             fi
