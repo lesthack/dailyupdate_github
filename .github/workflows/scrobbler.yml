@@ -37,6 +37,7 @@ jobs:
           fi
           sleep 30
         done
+        git pull origin master
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
