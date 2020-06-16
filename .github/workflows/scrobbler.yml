@@ -1,7 +1,7 @@
 name: Scrobbler
 on:
   schedule:
-    - cron: "30 * * * *"
+    - cron: "0 * * * *"
 jobs:
   scrobbling:
     runs-on: ubuntu-latest
