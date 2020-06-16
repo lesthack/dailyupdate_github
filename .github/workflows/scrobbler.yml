@@ -27,13 +27,13 @@ jobs:
         fi
     - name: LastFM & Commits
       run: |
-        for i in {1..120}
+        for i in {1..100}
         do
           echo "Scrobble $i:"
           python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
           git add music
           if [[ `git status --porcelain --untracked-files=no` ]]; then
-            git commit -m 'Lastfm: `date +"%Y-%m-%d %H:%M"`'
+            git commit -m "Lastfm: `date +"%Y-%m-%d %H:%M"`"
           fi
           sleep 30
         done
