@@ -36,11 +36,11 @@ jobs:
           python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
           git add music
           if [[ `git status --porcelain --untracked-files=no` ]]; then
+            git pull origin master
             git commit -m "Lastfm: `date +"%Y-%m-%d %H:%M"`"
           fi
           sleep 30
-        done
-        git pull origin master
+        done      
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
