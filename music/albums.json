@@ -105,13 +105,6 @@
         "url": "https://www.last.fm/music/quickly+quickly/Quickly+Quickly,+Vol.+1"
     }, 
     {
-        "album": "20. Significado. La Vida No Es Un Relato", 
-        "artist": "20. Significado. La Vida No Es Un Relato", 
-        "image": "", 
-        "playcount": "3", 
-        "url": "https://www.last.fm/music/20.+Significado.+La+Vida+No+Es+Un+Relato/20.+Significado.+La+Vida+No+Es+Un+Relato"
-    }, 
-    {
         "album": "21. Meditaci\u00f3n. Simplemente, Observemos", 
         "artist": "21. Meditaci\u00f3n. Simplemente, Observemos", 
         "image": "", 
@@ -159,6 +152,13 @@
         "image": "", 
         "playcount": "3", 
         "url": "https://www.last.fm/music/Sabino+y+Carla+Morrison/No+Te+Quiero+Perder"
+    }, 
+    {
+        "album": "20. Significado. La Vida No Es Un Relato", 
+        "artist": "20. Significado. La Vida No Es Un Relato", 
+        "image": "", 
+        "playcount": "2", 
+        "url": "https://www.last.fm/music/20.+Significado.+La+Vida+No+Es+Un+Relato/20.+Significado.+La+Vida+No+Es+Un+Relato"
     }, 
     {
         "album": "Billetes Falsos", 
