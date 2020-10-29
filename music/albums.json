@@ -252,6 +252,13 @@
         "url": "https://www.last.fm/music/Sabino/Lo+que+construimos"
     }, 
     {
+        "album": "sotto voce", 
+        "artist": "slenderbodies", 
+        "image": "", 
+        "playcount": "3", 
+        "url": "https://www.last.fm/music/slenderbodies/sotto+voce"
+    }, 
+    {
         "album": "Myopia", 
         "artist": "Agnes Obel", 
         "image": "", 
@@ -341,12 +348,5 @@
         "image": "", 
         "playcount": "2", 
         "url": "https://www.last.fm/music/Deftones/Ohms"
-    }, 
-    {
-        "album": "White Pony", 
-        "artist": "Deftones", 
-        "image": "", 
-        "playcount": "2", 
-        "url": "https://www.last.fm/music/Deftones/White+Pony"
     }
 ]}
