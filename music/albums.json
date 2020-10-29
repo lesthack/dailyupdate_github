@@ -196,6 +196,13 @@
         "url": "https://www.last.fm/music/Helado+Negro/This+Is+How+You+Smile"
     }, 
     {
+        "album": "Bestia", 
+        "artist": "Hello Seahorse!", 
+        "image": "", 
+        "playcount": "3", 
+        "url": "https://www.last.fm/music/Hello+Seahorse!/Bestia"
+    }, 
+    {
         "album": "R\u00edo Salvaje", 
         "artist": "Little Jesus", 
         "image": "", 
@@ -341,12 +348,5 @@
         "image": "", 
         "playcount": "2", 
         "url": "https://www.last.fm/music/Custom+Episode/Custom+Episode"
-    }, 
-    {
-        "album": "Ohms", 
-        "artist": "Deftones", 
-        "image": "", 
-        "playcount": "2", 
-        "url": "https://www.last.fm/music/Deftones/Ohms"
     }
 ]}
