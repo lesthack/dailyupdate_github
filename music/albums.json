@@ -14,18 +14,18 @@
         "url": "https://www.last.fm/music/El+Podcast+DEV/El+Podcast+DEV"
     }, 
     {
+        "album": "Ser Normal", 
+        "artist": "Alvinsch", 
+        "image": "", 
+        "playcount": "7", 
+        "url": "https://www.last.fm/music/Alvinsch/Ser+Normal"
+    }, 
+    {
         "album": "No S\u00e9", 
         "artist": "Alvinsch", 
         "image": "", 
         "playcount": "6", 
         "url": "https://www.last.fm/music/Alvinsch/No+S%C3%A9"
-    }, 
-    {
-        "album": "Ser Normal", 
-        "artist": "Alvinsch", 
-        "image": "", 
-        "playcount": "6", 
-        "url": "https://www.last.fm/music/Alvinsch/Ser+Normal"
     }, 
     {
         "album": "Walks", 
