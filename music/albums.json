@@ -14,6 +14,13 @@
         "url": "https://www.last.fm/music/El+Podcast+DEV/El+Podcast+DEV"
     }, 
     {
+        "album": "White Pony x Black Stallion Remix", 
+        "artist": "Deftones", 
+        "image": "", 
+        "playcount": "8", 
+        "url": "https://www.last.fm/music/Deftones/White+Pony+x+Black+Stallion+Remix"
+    }, 
+    {
         "album": "Ser Normal", 
         "artist": "Alvinsch", 
         "image": "", 
@@ -26,13 +33,6 @@
         "image": "", 
         "playcount": "6", 
         "url": "https://www.last.fm/music/Alvinsch/No+S%C3%A9"
-    }, 
-    {
-        "album": "White Pony x Black Stallion Remix", 
-        "artist": "Deftones", 
-        "image": "", 
-        "playcount": "5", 
-        "url": "https://www.last.fm/music/Deftones/White+Pony+x+Black+Stallion+Remix"
     }, 
     {
         "album": "Walks", 
