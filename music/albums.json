@@ -21,18 +21,18 @@
         "url": "https://www.last.fm/music/ROM+(by+Xataka+M%C3%A9xico)/ROM+(by+Xataka+M%C3%A9xico)"
     }, 
     {
-        "album": "El Podcast DEV", 
-        "artist": "El Podcast DEV", 
-        "image": "", 
-        "playcount": "8", 
-        "url": "https://www.last.fm/music/El+Podcast+DEV/El+Podcast+DEV"
-    }, 
-    {
         "album": "Ser Normal", 
         "artist": "Alvinsch", 
         "image": "", 
         "playcount": "7", 
         "url": "https://www.last.fm/music/Alvinsch/Ser+Normal"
+    }, 
+    {
+        "album": "El Podcast DEV", 
+        "artist": "El Podcast DEV", 
+        "image": "", 
+        "playcount": "7", 
+        "url": "https://www.last.fm/music/El+Podcast+DEV/El+Podcast+DEV"
     }, 
     {
         "album": "No S\u00e9", 
