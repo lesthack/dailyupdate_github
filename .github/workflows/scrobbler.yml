@@ -40,8 +40,8 @@ jobs:
           fi
           sleep 30
         done
-        git reset --hard HEAD
-        git pull origin master
+        git reset --hard HEAD 2> /dev/null
+        git pull origin master 2> /dev/null
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
