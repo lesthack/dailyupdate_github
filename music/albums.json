@@ -70,6 +70,13 @@
         "url": "https://www.last.fm/music/Arlo+Parks/Hurt"
     }, 
     {
+        "album": "Audiolibros favoritos", 
+        "artist": "Audiolibros favoritos", 
+        "image": "", 
+        "playcount": "4", 
+        "url": "https://www.last.fm/music/Audiolibros+favoritos/Audiolibros+favoritos"
+    }, 
+    {
         "album": "No Quiero Ser Tu Amigo", 
         "artist": "Cheo", 
         "image": "", 
@@ -159,13 +166,6 @@
         "image": "", 
         "playcount": "3", 
         "url": "https://www.last.fm/music/ANNA+&+Miss+Kittin+y+Miss+Kittin/Kompakt:+Total+20"
-    }, 
-    {
-        "album": "Audiolibros favoritos", 
-        "artist": "Audiolibros favoritos", 
-        "image": "", 
-        "playcount": "3", 
-        "url": "https://www.last.fm/music/Audiolibros+favoritos/Audiolibros+favoritos"
     }, 
     {
         "album": "Regresa", 
