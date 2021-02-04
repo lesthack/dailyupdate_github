@@ -56,6 +56,13 @@
         "url": "https://www.last.fm/music/Arlo+Parks/Hurt"
     }, 
     {
+        "album": "El Podcast DEV", 
+        "artist": "El Podcast DEV", 
+        "image": "", 
+        "playcount": "4", 
+        "url": "https://www.last.fm/music/El+Podcast+DEV/El+Podcast+DEV"
+    }, 
+    {
         "album": "Na Kozonga", 
         "artist": "Jupiter & Okwess", 
         "image": "", 
@@ -117,13 +124,6 @@
         "image": "", 
         "playcount": "3", 
         "url": "https://www.last.fm/music/Cheo/No+Quiero+Ser+Tu+Amigo"
-    }, 
-    {
-        "album": "El Podcast DEV", 
-        "artist": "El Podcast DEV", 
-        "image": "", 
-        "playcount": "3", 
-        "url": "https://www.last.fm/music/El+Podcast+DEV/El+Podcast+DEV"
     }, 
     {
         "album": "acts of rebellion", 
