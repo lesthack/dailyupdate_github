@@ -1,7 +1,7 @@
 name: Songs Scrobbler
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "15 * * * *"
 #    - cron: "0 0 1 1 *"
 jobs:
   scrobbling:
