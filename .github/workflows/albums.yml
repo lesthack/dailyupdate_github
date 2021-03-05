@@ -1,7 +1,8 @@
 name: Albums Scrobbler
 on:
   schedule:
-    - cron: "*/30 * * * *"
+#    - cron: "*/30 * * * *"
+    - cron: "0 0 1 1 *"
 jobs:
   scrobbling:
     runs-on: ubuntu-latest
