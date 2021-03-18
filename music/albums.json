@@ -105,6 +105,13 @@
         "url": "https://www.last.fm/music/Lucybell/Viajar"
     }, 
     {
+        "album": "Master Of Puppets (Deluxe Box Set) [Remaster]", 
+        "artist": "Metallica", 
+        "image": "", 
+        "playcount": "7", 
+        "url": "https://www.last.fm/music/Metallica/Master+Of+Puppets+(Deluxe+Box+Set)+%5BRemaster%5D"
+    }, 
+    {
         "album": "Nunca vas a comprender", 
         "artist": "Rita Pay\u00e9s y Elisabeth Roma", 
         "image": "", 
@@ -124,13 +131,6 @@
         "image": "", 
         "playcount": "6", 
         "url": "https://www.last.fm/music/La+Sonora+Dinamita+y+Sabino/Transformando+La+Cumbia"
-    }, 
-    {
-        "album": "Master Of Puppets (Deluxe Box Set) [Remaster]", 
-        "artist": "Metallica", 
-        "image": "", 
-        "playcount": "6", 
-        "url": "https://www.last.fm/music/Metallica/Master+Of+Puppets+(Deluxe+Box+Set)+%5BRemaster%5D"
     }, 
     {
         "album": "Deluxe: Johnny B. Goode", 
