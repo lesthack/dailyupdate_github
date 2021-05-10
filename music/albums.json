@@ -3,7 +3,7 @@
         "album": "The start up investment", 
         "artist": "Hola Beats", 
         "image": "", 
-        "playcount": "23", 
+        "playcount": "27", 
         "url": "https://www.last.fm/music/Hola+Beats/The+start+up+investment"
     }, 
     {
@@ -28,10 +28,17 @@
         "url": "https://www.last.fm/music/Creativo/Creativo"
     }, 
     {
+        "album": "Entropy", 
+        "artist": "Hola Beats", 
+        "image": "", 
+        "playcount": "15", 
+        "url": "https://www.last.fm/music/Hola+Beats/Entropy"
+    }, 
+    {
         "album": "The anti-pattern philosophy", 
         "artist": "Hola Beats", 
         "image": "", 
-        "playcount": "13", 
+        "playcount": "15", 
         "url": "https://www.last.fm/music/Hola+Beats/The+anti-pattern+philosophy"
     }, 
     {
@@ -40,13 +47,6 @@
         "image": "", 
         "playcount": "13", 
         "url": "https://www.last.fm/music/ROM+(by+Xataka+M%C3%A9xico)/ROM+(by+Xataka+M%C3%A9xico)"
-    }, 
-    {
-        "album": "Entropy", 
-        "artist": "Hola Beats", 
-        "image": "", 
-        "playcount": "12", 
-        "url": "https://www.last.fm/music/Hola+Beats/Entropy"
     }, 
     {
         "album": "Tiempo Compartido", 
