@@ -28,18 +28,18 @@
         "url": "https://www.last.fm/music/Hola+Beats/The+anti-pattern+philosophy"
     }, 
     {
-        "album": "Meditantes", 
-        "artist": "Meditantes", 
-        "image": "", 
-        "playcount": "16", 
-        "url": "https://www.last.fm/music/Meditantes/Meditantes"
-    }, 
-    {
         "album": "Time estimation", 
         "artist": "Hola Beats", 
         "image": "", 
         "playcount": "15", 
         "url": "https://www.last.fm/music/Hola+Beats/Time+estimation"
+    }, 
+    {
+        "album": "Meditantes", 
+        "artist": "Meditantes", 
+        "image": "", 
+        "playcount": "15", 
+        "url": "https://www.last.fm/music/Meditantes/Meditantes"
     }, 
     {
         "album": "ROM (by Xataka M\u00e9xico)", 
