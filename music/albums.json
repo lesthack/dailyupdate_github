@@ -98,6 +98,13 @@
         "url": "https://www.last.fm/music/Lucybell/Lumina"
     }, 
     {
+        "album": "Cap\u00edtulo 9", 
+        "artist": "Cap\u00edtulo 9", 
+        "image": "", 
+        "playcount": "4", 
+        "url": "https://www.last.fm/music/Cap%C3%ADtulo+9/Cap%C3%ADtulo+9"
+    }, 
+    {
         "album": "5,924 vistas", 
         "artist": "Crash Adams", 
         "image": "", 
@@ -208,13 +215,6 @@
         "image": "", 
         "playcount": "3", 
         "url": "https://www.last.fm/music/Cap%C3%ADtulo+8/Cap%C3%ADtulo+8"
-    }, 
-    {
-        "album": "Cap\u00edtulo 9", 
-        "artist": "Cap\u00edtulo 9", 
-        "image": "", 
-        "playcount": "3", 
-        "url": "https://www.last.fm/music/Cap%C3%ADtulo+9/Cap%C3%ADtulo+9"
     }, 
     {
         "album": "Perspective", 
