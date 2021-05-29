@@ -70,13 +70,6 @@
         "url": "https://www.last.fm/music/Hola+Beats/Isaac%27s+monster"
     }, 
     {
-        "album": "Meditantes", 
-        "artist": "Meditantes", 
-        "image": "", 
-        "playcount": "8", 
-        "url": "https://www.last.fm/music/Meditantes/Meditantes"
-    }, 
-    {
         "album": "Yo Quer\u00eda Ser Yo", 
         "artist": "Sabino", 
         "image": "", 
@@ -89,6 +82,13 @@
         "image": "", 
         "playcount": "7", 
         "url": "https://www.last.fm/music/Hola+Beats/Learning+to+code"
+    }, 
+    {
+        "album": "Meditantes", 
+        "artist": "Meditantes", 
+        "image": "", 
+        "playcount": "7", 
+        "url": "https://www.last.fm/music/Meditantes/Meditantes"
     }, 
     {
         "album": "Memories from my first computer", 
