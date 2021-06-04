@@ -112,6 +112,13 @@
         "url": "https://www.last.fm/music/Hola+Beats/Remote+work"
     }, 
     {
+        "album": "Meditantes", 
+        "artist": "Meditantes", 
+        "image": "", 
+        "playcount": "6", 
+        "url": "https://www.last.fm/music/Meditantes/Meditantes"
+    }, 
+    {
         "album": "Cap\u00edtulo 9", 
         "artist": "Cap\u00edtulo 9", 
         "image": "", 
@@ -145,13 +152,6 @@
         "image": "", 
         "playcount": "5", 
         "url": "https://www.last.fm/music/Hola+Beats/Scary+monsters"
-    }, 
-    {
-        "album": "Meditantes", 
-        "artist": "Meditantes", 
-        "image": "", 
-        "playcount": "5", 
-        "url": "https://www.last.fm/music/Meditantes/Meditantes"
     }, 
     {
         "album": "5,924 vistas", 
