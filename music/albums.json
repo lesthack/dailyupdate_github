@@ -231,13 +231,6 @@
         "url": "https://www.last.fm/music/APRE/32,414+vistas"
     }, 
     {
-        "album": "Cap\u00edtulo 8", 
-        "artist": "Cap\u00edtulo 8", 
-        "image": "", 
-        "playcount": "3", 
-        "url": "https://www.last.fm/music/Cap%C3%ADtulo+8/Cap%C3%ADtulo+8"
-    }, 
-    {
         "album": "401,274 vistas", 
         "artist": "Colours in the Street", 
         "image": "", 
@@ -348,5 +341,12 @@
         "image": "", 
         "playcount": "2", 
         "url": "https://www.last.fm/music/APRE/62,921+vistas"
+    }, 
+    {
+        "album": "D:Vision #Beatportdecade Elettrohouse D:Vision Presents Benny Benassi", 
+        "artist": "Benny Benassi, The Biz y The Biz", 
+        "image": "", 
+        "playcount": "2", 
+        "url": "https://www.last.fm/music/Benny+Benassi,+The+Biz+y+The+Biz/D:Vision+%23Beatportdecade+Elettrohouse+D:Vision+Presents+Benny+Benassi"
     }
 ]}
