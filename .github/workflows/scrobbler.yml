@@ -2,7 +2,7 @@ name: Songs Scrobbler
 on:
   schedule:
 #    - cron: "15 * * * *"
-    - cron: "37 22 * * *"
+    - cron: "52 22 * * *"
 jobs:
   scrobbling:
     runs-on: ubuntu-18.04
@@ -11,6 +11,10 @@ jobs:
       uses: actions/checkout@master
     - name: LastFM & Commits
       run: |
+        echo "Config Github"
+        git config --local user.email ${{ secrets.COMMIT_EMAIL }}
+        git config --local user.name "Jorge Hernández"
+        git config --local pull.rebase true
         echo "Scrobbling all items:"
         pip install requests python-dateutil
         python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -t -p $PWD
