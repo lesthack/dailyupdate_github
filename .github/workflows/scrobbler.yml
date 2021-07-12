@@ -2,7 +2,7 @@ name: Songs Scrobbler
 on:
   schedule:
 #    - cron: "15 * * * *"
-    - cron: "29 22 * * *"
+    - cron: "37 22 * * *"
 jobs:
   scrobbling:
     runs-on: ubuntu-18.04
@@ -12,6 +12,7 @@ jobs:
     - name: LastFM & Commits
       run: |
         echo "Scrobbling all items:"
+        pip install requests python-dateutil
         python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -t -p $PWD
     - name: Push changes
       uses: ad-m/github-push-action@master
