@@ -2,7 +2,7 @@ name: Songs Scrobbler
 on:
   schedule:
 #    - cron: "15 * * * *"
-    - cron: "20 22 * * *"
+    - cron: "23 * * * *"
 jobs:
   scrobbling:
     runs-on: ubuntu-18.04
