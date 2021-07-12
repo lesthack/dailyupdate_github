@@ -23,7 +23,7 @@ local_now = datetime.now()
 local_date = datetime(local_now.year, local_now.month, local_now.day)
 utc_date = local_date.replace(tzinfo=to_zone).astimezone(from_zone)
 
-def scrobbler_day():
+def scrobbler_day(make_commits=True):
     params = {
         'method': 'user.getRecentTracks',
         'limit': 200,
