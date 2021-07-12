@@ -48,7 +48,7 @@ def scrobbler_day():
                 if len(artist) == 0: artist = 'unknown'
                 if len(track) == 0: track = 'unknown'
                 
-                track_info = '{artist} | {album} | {track} | {date}'.format(
+                track_info = '{artist}-{album}-{track}|{date}'.format(
                     artist=artist.encode('utf-8'),
                     album=album.encode('utf-8'),
                     track=track.encode('utf-8'),
