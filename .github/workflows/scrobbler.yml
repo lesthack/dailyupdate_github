@@ -2,47 +2,17 @@ name: Songs Scrobbler
 on:
   schedule:
 #    - cron: "15 * * * *"
-    - cron: "0 0 1 1 *"
+    - cron: "15 17 * * *"
 jobs:
   scrobbling:
     runs-on: ubuntu-18.04
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Configurations
-      run: |
-        date=`date +"%Y-%m-%d %H:%M"`
-        year=`date +"%Y"`
-        month=`date +"%m"`
-        
-        git config --local user.email ${{ secrets.COMMIT_EMAIL }}
-        git config --local user.name "Jorge Hernández"
-        git config --local pull.rebase true
-        
-        pip install requests
-        echo "Path: $PWD"
-        if [ ! -d "$PWD/music/$year" ]; then
-          echo "Creando path año: $year"
-          mkdir $PWD/music/$year
-        fi
-        if [ ! -d "$PWD/music/$year/$month" ]; then
-          echo "Creando path año/mes: $month"
-          mkdir $PWD/music/$year/$month
-        fi
     - name: LastFM & Commits
       run: |
-        for i in {1..80}
-        do
-          echo "Scrobble $i:"
-          python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -s -p $PWD
-          git add music
-          if [[ `git status --porcelain --untracked-files=no` ]]; then            
-            git commit -m "Lastfm: `date +"%Y-%m-%d %H:%M"`"
-          fi
-          sleep 30
-        done
-        git reset --hard HEAD 2> /dev/null
-        git pull origin master 2> /dev/null
+        echo "Scrobbling all items:"
+        python lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -t -p $PWD
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
