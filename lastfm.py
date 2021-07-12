@@ -10,9 +10,6 @@ import json
 import sys
 import os
 
-year = str(datetime.now().year)
-month = str(datetime.now().month).zfill(2)
-day = str(datetime.now().day).zfill(2)
 last_url = 'http://ws.audioscrobbler.com/2.0/'
 last_user = None
 last_apikey = None
@@ -23,7 +20,12 @@ local_now = datetime.now()
 local_date = datetime(local_now.year, local_now.month, local_now.day)
 utc_date = local_date.replace(tzinfo=to_zone).astimezone(from_zone)
 
-def scrobbler_day(make_commits=True):
+year = str(local_now.year)
+month = str(local_now.month).zfill(2)
+day = str(local_now.day).zfill(2)
+
+def scrobbler_day(music_path, make_commits=True):
+    scrobbler_file = '{base}/{day}.md'.format(base=music_path, day=str(datetime.now().day).zfill(2))
     params = {
         'method': 'user.getRecentTracks',
         'limit': 200,
@@ -34,8 +36,10 @@ def scrobbler_day(make_commits=True):
         'format': 'json'
     }
     try:
+        if os.path.exists(scrobbler_file): os.remove(scrobbler_file)
         r = requests.get(last_url, params=params)
         json_response = json.loads(r.content)
+        list_songs = []
         for item in json_response['recenttracks']['track']:
             album = item['album']['#text']
             artist = item['artist']['#text']
@@ -54,7 +58,21 @@ def scrobbler_day(make_commits=True):
                     track=track.encode('utf-8'),
                     date=date
                 ) 
-                print(track_info)
+                list_songs.append([date, '{artist} - {album} - {track}'.format(
+                    artist=artist.encode('utf-8'),
+                    album=album.encode('utf-8'),
+                    track=track.encode('utf-8')
+                )])
+        while list_songs.__len__() > 0:
+            item = list_songs.pop()
+            sf = open(scrobbler_file, 'a')
+            commit_date = item[0].strftime('%Y-%m-%d %H:%M:%S')
+            sf.write('{} -> {}\n'.format(commit_date, item[1]))
+            sf.close()
+            os.system('export GIT_COMMITTER_DATE="{}"'.format(commit_date))
+            os.system('export GIT_AUTHOR_DATE="{}"'.format(commit_date))
+            os.system('git add {} -f'.format(scrobbler_file))
+            os.system('git commit --date="{}" -m "{}"'.format(commit_date, item[1]))
 
     except Exception as e:
         print('Error: ', e)
@@ -166,7 +184,9 @@ if last_apikey and last_user and args['path'] and args['scrobbler']:
     music_path = os.path.join(args['path'], 'music', year, month)
     scrobbler(music_path)
 elif last_apikey and last_user and args['scrobbler_today']:
-    scrobbler_day()
+    music_path = os.path.join(args['path'], 'music', year, month)
+    if not os.path.exists(music_path): os.makedirs(music_path)
+    scrobbler_day(music_path)
 elif last_apikey and last_user and args['path'] and args['topalbums']:
     topalbums(args['path'])
 else:
