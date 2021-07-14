@@ -17,9 +17,10 @@ last_apikey = None
 from_zone = tz.gettz('UTC')
 to_zone = tz.gettz('America/Mexico_City')
 local_now = datetime.now()
+local_adjust = local_now - timedelta(hours=1)
 #local_date = datetime(local_now.year, local_now.month, local_now.day)
 #utc_date = local_date.replace(tzinfo=to_zone).astimezone(from_zone)
-utc_date = (local_now - timedelta(hours=1)).replace(tzinfo=to_zone).astimezone(from_zone)
+#utc_date = (local_now - timedelta(hours=8)).replace(tzinfo=to_zone).astimezone(from_zone)
 
 year = str(local_now.year)
 month = str(local_now.month).zfill(2)
@@ -30,7 +31,7 @@ def scrobbler_hrs(music_path, make_commits=True):
     params = {
         'method': 'user.getRecentTracks',
         'limit': 200,
-        'from': int(utc_date.strftime("%s")),
+        'from': int(local_adjust.strftime("%s")),
         'user': last_user,
         'page': 1,
         'api_key': last_apikey,
@@ -41,6 +42,9 @@ def scrobbler_hrs(music_path, make_commits=True):
         r = requests.get(last_url, params=params)
         json_response = json.loads(r.content)
         list_songs = []
+        tracks = json_response['recenttracks']['track']
+        if type(json_response['recenttracks']['track']) == dict:
+            tracks = [json_response['recenttracks']['track']]
         for item in json_response['recenttracks']['track']:
             album = item['album']['#text']
             artist = item['artist']['#text']
