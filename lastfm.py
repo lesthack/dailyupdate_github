@@ -19,13 +19,13 @@ to_zone = tz.gettz('America/Mexico_City')
 local_now = datetime.now()
 #local_date = datetime(local_now.year, local_now.month, local_now.day)
 #utc_date = local_date.replace(tzinfo=to_zone).astimezone(from_zone)
-utc_date = (local_now - timedelta(hours=8)).replace(tzinfo=to_zone).astimezone(from_zone)
+utc_date = (local_now - timedelta(hours=1)).replace(tzinfo=to_zone).astimezone(from_zone)
 
 year = str(local_now.year)
 month = str(local_now.month).zfill(2)
 day = str(local_now.day).zfill(2)
 
-def scrobbler_8hrs(music_path, make_commits=True):
+def scrobbler_hrs(music_path, make_commits=True):
     scrobbler_file = '{base}/{day}.md'.format(base=music_path, day=str(datetime.now().day).zfill(2))
     params = {
         'method': 'user.getRecentTracks',
@@ -189,7 +189,7 @@ if last_apikey and last_user and args['path'] and args['scrobbler']:
 elif last_apikey and last_user and args['scrobbler_today']:
     music_path = os.path.join(args['path'], 'music', year, month)
     if not os.path.exists(music_path): os.makedirs(music_path)
-    scrobbler_8hrs(music_path, False)
+    scrobbler_hrs(music_path)
 elif last_apikey and last_user and args['path'] and args['topalbums']:
     topalbums(args['path'])
 else:
