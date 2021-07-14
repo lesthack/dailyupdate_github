@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from datetime import datetime
+from datetime import datetime, timedelta
 from dateutil import tz
 import time
 import urllib2
@@ -17,26 +17,27 @@ last_apikey = None
 from_zone = tz.gettz('UTC')
 to_zone = tz.gettz('America/Mexico_City')
 local_now = datetime.now()
-local_date = datetime(local_now.year, local_now.month, local_now.day)
-utc_date = local_date.replace(tzinfo=to_zone).astimezone(from_zone)
+#local_date = datetime(local_now.year, local_now.month, local_now.day)
+#utc_date = local_date.replace(tzinfo=to_zone).astimezone(from_zone)
+utc_date = (local_now - timedelta(hours=8)).replace(tzinfo=to_zone).astimezone(from_zone)
 
 year = str(local_now.year)
 month = str(local_now.month).zfill(2)
 day = str(local_now.day).zfill(2)
 
-def scrobbler_day(music_path, make_commits=True):
+def scrobbler_8hrs(music_path, make_commits=True):
     scrobbler_file = '{base}/{day}.md'.format(base=music_path, day=str(datetime.now().day).zfill(2))
     params = {
         'method': 'user.getRecentTracks',
         'limit': 200,
-        'from': utc_date.strftime("%s"),
+        'from': int(utc_date.strftime("%s")),
         'user': last_user,
         'page': 1,
         'api_key': last_apikey,
         'format': 'json'
     }
     try:
-        if os.path.exists(scrobbler_file): os.remove(scrobbler_file)
+        #if os.path.exists(scrobbler_file): os.remove(scrobbler_file)
         r = requests.get(last_url, params=params)
         json_response = json.loads(r.content)
         list_songs = []
@@ -51,7 +52,6 @@ def scrobbler_day(music_path, make_commits=True):
                 if len(album) == 0: album = 'unknown'
                 if len(artist) == 0: artist = 'unknown'
                 if len(track) == 0: track = 'unknown'
-                
                 track_info = '{artist}-{album}-{track}|{date}'.format(
                     artist=artist.encode('utf-8'),
                     album=album.encode('utf-8'),
@@ -67,12 +67,15 @@ def scrobbler_day(music_path, make_commits=True):
             item = list_songs.pop()
             sf = open(scrobbler_file, 'a')
             commit_date = item[0].strftime('%Y-%m-%d %H:%M:%S')
-            sf.write('{} -> {}\n'.format(commit_date, item[1]))
+            new_line = '{} -> {}'.format(commit_date, item[1])
+            sf.write(new_line+'\n')
             sf.close()
-            os.system('export GIT_COMMITTER_DATE="{}"'.format(commit_date))
-            os.system('export GIT_AUTHOR_DATE="{}"'.format(commit_date))
-            os.system('git add {} -f'.format(scrobbler_file))
-            os.system('git commit --date="{}" -m "{}"'.format(commit_date, item[1]))
+            print(new_line)
+            if make_commits:
+                os.system('export GIT_COMMITTER_DATE="{}"'.format(commit_date))
+                os.system('export GIT_AUTHOR_DATE="{}"'.format(commit_date))
+                os.system('git add {} -f'.format(scrobbler_file))
+                os.system('git commit --date="{}" -m "{}"'.format(commit_date, item[1]))
 
     except Exception as e:
         print('Error: ', e)
@@ -186,7 +189,7 @@ if last_apikey and last_user and args['path'] and args['scrobbler']:
 elif last_apikey and last_user and args['scrobbler_today']:
     music_path = os.path.join(args['path'], 'music', year, month)
     if not os.path.exists(music_path): os.makedirs(music_path)
-    scrobbler_day(music_path)
+    scrobbler_8hrs(music_path, False)
 elif last_apikey and last_user and args['path'] and args['topalbums']:
     topalbums(args['path'])
 else:
