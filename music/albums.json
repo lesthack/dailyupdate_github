@@ -147,13 +147,6 @@
         "url": "https://www.last.fm/music/Kupla/Kingdom+in+Blue"
     }, 
     {
-        "album": "Shingeki no Kyojin", 
-        "artist": "Lastshadow LP", 
-        "image": "", 
-        "playcount": "4", 
-        "url": "https://www.last.fm/music/Lastshadow+LP/Shingeki+no+Kyojin"
-    }, 
-    {
         "album": "Chillhop Essentials Spring 2020", 
         "artist": "Middle School", 
         "image": "", 
@@ -348,5 +341,12 @@
         "image": "", 
         "playcount": "2", 
         "url": "https://www.last.fm/music/Blue+J/Park+Sounds"
+    }, 
+    {
+        "album": "Hedonista", 
+        "artist": "Caloncho", 
+        "image": "", 
+        "playcount": "2", 
+        "url": "https://www.last.fm/music/Caloncho/Hedonista"
     }
 ]}
