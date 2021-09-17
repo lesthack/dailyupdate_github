@@ -336,17 +336,17 @@
         "url": "https://www.last.fm/music/Dam/Ben+Haana+Wa+Maana"
     }, 
     {
+        "album": "Herejes: El Podcast", 
+        "artist": "Herejes: El Podcast", 
+        "image": "", 
+        "playcount": "2", 
+        "url": "https://www.last.fm/music/Herejes:+El+Podcast/Herejes:+El+Podcast"
+    }, 
+    {
         "album": "Suuurf", 
         "artist": "Hubert Daviz y \u00d8DYSSEE", 
         "image": "", 
         "playcount": "2", 
         "url": "https://www.last.fm/music/Hubert+Daviz+y+%C3%98DYSSEE/Suuurf"
-    }, 
-    {
-        "album": "Distant, Quiet, Waters (Inspired by 'The Outlaw Ocean' a book by Ian Urbina)", 
-        "artist": "Idealism y Ian Urbina", 
-        "image": "", 
-        "playcount": "2", 
-        "url": "https://www.last.fm/music/Idealism+y+Ian+Urbina/Distant,+Quiet,+Waters+(Inspired+by+%27The+Outlaw+Ocean%27+a+book+by+Ian+Urbina)"
     }
 ]}
