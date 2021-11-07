@@ -161,13 +161,6 @@
         "url": "https://www.last.fm/music/Faye+Webster/I+Know+I%27m+Funny+haha"
     }, 
     {
-        "album": "Ingl\u00e9s para Devs", 
-        "artist": "Ingl\u00e9s para Devs", 
-        "image": "", 
-        "playcount": "4", 
-        "url": "https://www.last.fm/music/Ingl%C3%A9s+para+Devs/Ingl%C3%A9s+para+Devs"
-    }, 
-    {
         "album": "Perfume de Violetas (Original Motion Picture Soundtrack)", 
         "artist": "Intestino Grueso", 
         "image": "", 
@@ -334,6 +327,13 @@
         "image": "", 
         "playcount": "3", 
         "url": "https://www.last.fm/music/Gnossienne,+The+Environment/Bones+Decay"
+    }, 
+    {
+        "album": "Ingl\u00e9s para Devs", 
+        "artist": "Ingl\u00e9s para Devs", 
+        "image": "", 
+        "playcount": "3", 
+        "url": "https://www.last.fm/music/Ingl%C3%A9s+para+Devs/Ingl%C3%A9s+para+Devs"
     }, 
     {
         "album": "A Rising Sun", 
