@@ -105,6 +105,13 @@
         "url": "https://www.last.fm/music/The+Mar%C3%ADas/Hush"
     }, 
     {
+        "album": "Caso 63", 
+        "artist": "Caso 63", 
+        "image": "", 
+        "playcount": "5", 
+        "url": "https://www.last.fm/music/Caso+63/Caso+63"
+    }, 
+    {
         "album": "Creativo", 
         "artist": "Creativo", 
         "image": "", 
@@ -152,13 +159,6 @@
         "image": "", 
         "playcount": "4", 
         "url": "https://www.last.fm/music/Bachelor,+Jay+Som+y+Palehound/Anything+at+All"
-    }, 
-    {
-        "album": "Caso 63", 
-        "artist": "Caso 63", 
-        "image": "", 
-        "playcount": "4", 
-        "url": "https://www.last.fm/music/Caso+63/Caso+63"
     }, 
     {
         "album": "Jubilee", 
