@@ -84,6 +84,13 @@
         "url": "https://www.last.fm/music/Coldplay/Higher+Power"
     }, 
     {
+        "album": "DevTalles", 
+        "artist": "DevTalles", 
+        "image": "", 
+        "playcount": "4", 
+        "url": "https://www.last.fm/music/DevTalles/DevTalles"
+    }, 
+    {
         "album": "Herejes: El Podcast", 
         "artist": "Herejes: El Podcast", 
         "image": "", 
@@ -131,13 +138,6 @@
         "image": "", 
         "playcount": "3", 
         "url": "https://www.last.fm/music/Degenerate/Quisiera"
-    }, 
-    {
-        "album": "DevTalles", 
-        "artist": "DevTalles", 
-        "image": "", 
-        "playcount": "3", 
-        "url": "https://www.last.fm/music/DevTalles/DevTalles"
     }, 
     {
         "album": "Truce - EP", 
