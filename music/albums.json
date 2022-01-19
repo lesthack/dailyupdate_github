@@ -21,18 +21,18 @@
         "url": "https://www.last.fm/music/Lido+Pimienta/Miss+Colombia"
     }, 
     {
-        "album": "Creativo", 
-        "artist": "Creativo", 
-        "image": "", 
-        "playcount": "9", 
-        "url": "https://www.last.fm/music/Creativo/Creativo"
-    }, 
-    {
         "album": "ROM (by Xataka M\u00e9xico)", 
         "artist": "ROM (by Xataka M\u00e9xico)", 
         "image": "", 
         "playcount": "9", 
         "url": "https://www.last.fm/music/ROM+(by+Xataka+M%C3%A9xico)/ROM+(by+Xataka+M%C3%A9xico)"
+    }, 
+    {
+        "album": "Creativo", 
+        "artist": "Creativo", 
+        "image": "", 
+        "playcount": "8", 
+        "url": "https://www.last.fm/music/Creativo/Creativo"
     }, 
     {
         "album": "Almadura", 
