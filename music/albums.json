@@ -17,7 +17,7 @@
         "album": "ROM (by Xataka M\u00e9xico)", 
         "artist": "ROM (by Xataka M\u00e9xico)", 
         "image": "", 
-        "playcount": "10", 
+        "playcount": "11", 
         "url": "https://www.last.fm/music/ROM+(by+Xataka+M%C3%A9xico)/ROM+(by+Xataka+M%C3%A9xico)"
     }, 
     {
@@ -33,13 +33,6 @@
         "image": "", 
         "playcount": "8", 
         "url": "https://www.last.fm/music/Surfaces+y+salem+ilese/Pacifico"
-    }, 
-    {
-        "album": "Migala", 
-        "artist": "Migala", 
-        "image": "", 
-        "playcount": "7", 
-        "url": "https://www.last.fm/music/Migala/Migala"
     }, 
     {
         "album": "Toxicity", 
@@ -61,6 +54,13 @@
         "image": "", 
         "playcount": "6", 
         "url": "https://www.last.fm/music/Herejes:+El+Podcast/Herejes:+El+Podcast"
+    }, 
+    {
+        "album": "Migala", 
+        "artist": "Migala", 
+        "image": "", 
+        "playcount": "6", 
+        "url": "https://www.last.fm/music/Migala/Migala"
     }, 
     {
         "album": "Fruta (Vol. II)", 
