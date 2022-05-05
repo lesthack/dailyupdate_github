@@ -77,13 +77,6 @@
         "url": "https://www.last.fm/music/Limp+Bizkit/Chocolate+Starfish+and+the+Hot+Dog+Flavored+Water"
     }, 
     {
-        "album": "Migala", 
-        "artist": "Migala", 
-        "image": "", 
-        "playcount": "3", 
-        "url": "https://www.last.fm/music/Migala/Migala"
-    }, 
-    {
         "album": "Pacifico", 
         "artist": "Surfaces y salem ilese", 
         "image": "", 
@@ -138,6 +131,13 @@
         "image": "", 
         "playcount": "2", 
         "url": "https://www.last.fm/music/Middle+School/Chillhop+Essentials+Spring+2020"
+    }, 
+    {
+        "album": "Migala", 
+        "artist": "Migala", 
+        "image": "", 
+        "playcount": "2", 
+        "url": "https://www.last.fm/music/Migala/Migala"
     }, 
     {
         "album": "urtha1 .", 
