@@ -28,13 +28,6 @@
         "url": "https://www.last.fm/music/Foudeqush/Fosis+Met+Amor"
     }, 
     {
-        "album": "Herejes: El Podcast", 
-        "artist": "Herejes: El Podcast", 
-        "image": "", 
-        "playcount": "6", 
-        "url": "https://www.last.fm/music/Herejes:+El+Podcast/Herejes:+El+Podcast"
-    }, 
-    {
         "album": "ROM (by Xataka M\u00e9xico)", 
         "artist": "ROM (by Xataka M\u00e9xico)", 
         "image": "", 
@@ -47,6 +40,13 @@
         "image": "", 
         "playcount": "5", 
         "url": "https://www.last.fm/music/Creativo/Creativo"
+    }, 
+    {
+        "album": "Herejes: El Podcast", 
+        "artist": "Herejes: El Podcast", 
+        "image": "", 
+        "playcount": "5", 
+        "url": "https://www.last.fm/music/Herejes:+El+Podcast/Herejes:+El+Podcast"
     }, 
     {
         "album": "Wish You Were Here", 
