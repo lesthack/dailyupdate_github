@@ -19,7 +19,7 @@ jobs:
         git config --local user.name "Jorge Hernández"
         git config --local pull.rebase true
         
-        pip install requests python-dateutil
+        pip2 install requests python-dateutil
     - name: LastFM & Commits
       run: |
         echo "Albums:"
