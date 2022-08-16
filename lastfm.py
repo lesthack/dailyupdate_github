@@ -140,7 +140,7 @@ def topalbums(albums_path):
         'user': last_user,
         'api_key': last_apikey,
         'format': 'json',
-        'period': '1month',
+        'period': '6month',
         #'limit': 1,
         #'page': 1,
     }
