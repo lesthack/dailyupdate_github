@@ -1,8 +1,7 @@
 name: Songs Scrobbler
 on:
   schedule:
-#    - cron: "15 * * * *"
-    - cron: "30 * * * *"
+    - cron: "0 * * * *"
 jobs:
   scrobbling:
     runs-on: ubuntu-22.04
