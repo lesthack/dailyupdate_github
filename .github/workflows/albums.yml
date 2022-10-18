@@ -19,11 +19,13 @@ jobs:
         git config --local user.name "Jorge Hernández"
         git config --local pull.rebase true
         
-        pip2 install requests python-dateutil
+        sudo apt-get install python3-pip
+        python3 -m pip install python-dateutil
+        python3 -m pip install requests
     - name: LastFM & Commits
       run: |
         echo "Albums:"
-        python2 lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -a -p $PWD/music/albums.json
+        python3 lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -a -p $PWD/music/albums.json
         git add music/albums.json
         if [[ `git status --porcelain --untracked-files=no` ]]; then
           git commit -m "Albums: `date +"%Y-%m-%d %H:%M"`"
