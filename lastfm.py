@@ -45,7 +45,7 @@ def scrobbler_hrs(music_path, make_commits=True):
         tracks = json_response['recenttracks']['track']
         if type(json_response['recenttracks']['track']) == dict:
             tracks = [json_response['recenttracks']['track']]
-        for item in json_response['recenttracks']['track']:
+        for item in tracks:
             album = item['album']['#text']
             artist = item['artist']['#text']
             track = item['name']
@@ -174,7 +174,7 @@ argp = ArgumentParser(
     prog='lesthackbot',
         description='Bot for make commits in the repo through scrobbling',
     epilog='GPL v3.0',
-    version='2.0'
+    #version='2.0'
 )
 argp.add_argument('-k', dest='api_key', action='store', help='LastFM Api Key')
 argp.add_argument('-u', dest='user', action='store', help='LastFM Username')
@@ -198,4 +198,3 @@ elif last_apikey and last_user and args['path'] and args['topalbums']:
     topalbums(args['path'])
 else:
     argp.print_help()
-
