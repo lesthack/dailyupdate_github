@@ -2,7 +2,7 @@ from argparse import ArgumentParser
 from datetime import datetime, timedelta
 from dateutil import tz
 import time
-import urllib2
+from urllib.request import urlopen
 import requests
 import traceback
 import base64
@@ -153,7 +153,7 @@ def topalbums(albums_path):
         for album in topalbums['album']:
             img64 = ''
             if(album['image'][2]['#text'].__len__()>0):
-                img64 = base64.b64encode(urllib2.urlopen(album['image'][2]['#text']).read())
+                img64 = base64.b64encode(urlopen(album['image'][2]['#text']).read())
             list_albums.append({
                 'artist': album['artist']['name'],
                 'album': album['name'],
