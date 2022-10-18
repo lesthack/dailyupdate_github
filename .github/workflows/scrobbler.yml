@@ -16,8 +16,10 @@ jobs:
         git config --local user.name "Jorge Hernández"
         git config --local pull.rebase true
         echo "Scrobbling all items:"
-        pip2 install requests python-dateutil
-        python2 lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -t -p $PWD
+        sudo apt-get install python3-pip
+        python3 -m pip install python-dateutil
+        python3 -m pip install requests
+        python3 lastfm.py -k ${{ secrets.LASTFM_APIKEY }} -u ${{ secrets.LASTFM_USER }} -t -p $PWD
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
