@@ -140,7 +140,7 @@ def topalbums(albums_path):
         'user': last_user,
         'api_key': last_apikey,
         'format': 'json',
-        'period': '6month',
+        'period': '12month',
         #'limit': 1,
         #'page': 1,
     }
@@ -159,13 +159,12 @@ def topalbums(albums_path):
                 'album': album['name'],
                 'url': album['url'],
                 'playcount': album['playcount'],
-                'image': img64
+                'image': u''.format(img64)
             })
-
+        #print(list_albums)
         sf = open(albums_path, 'w')
         sf.write('{"topalbums":'+json.dumps(list_albums, sort_keys=True, indent=4)+'}')
         sf.close()
-        print(len(list_albums))
     except Exception as e:
         print('Error: ', e)
         traceback.print_exc(file=sys.stdout)
