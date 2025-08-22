@@ -154,12 +154,13 @@ def topalbums(albums_path):
             img64 = ''
             if(album['image'][2]['#text'].__len__()>0):
                 img64 = base64.b64encode(urlopen(album['image'][2]['#text']).read())
+                img64 = img64.decode('utf-8')
             list_albums.append({
                 'artist': album['artist']['name'],
                 'album': album['name'],
                 'url': album['url'],
                 'playcount': album['playcount'],
-                'image': u'{}'.format(img64)
+                'image': img64
             })
         #print(list_albums)
         sf = open(albums_path, 'w')
