@@ -159,7 +159,7 @@ def topalbums(albums_path):
                 'album': album['name'],
                 'url': album['url'],
                 'playcount': album['playcount'],
-                'image': u''.format(img64)
+                'image': u'{}'.format(img64)
             })
         #print(list_albums)
         sf = open(albums_path, 'w')
